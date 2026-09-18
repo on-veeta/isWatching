@@ -9,6 +9,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+html,body{margin:0;padding:0;background:#080611;color:#f8f6ff;}
+img.logo-mark{display:block!important;width:34px!important;height:34px!important;max-width:34px!important;max-height:34px!important;object-fit:cover!important;flex:0 0 34px!important;}
+.panel-brand img.logo-mark,.side-brand img.logo-mark{width:25px!important;height:25px!important;max-width:25px!important;max-height:25px!important;flex-basis:25px!important;}
+.footer .brand img.logo-mark{width:28px!important;height:28px!important;max-width:28px!important;max-height:28px!important;flex-basis:28px!important;}
+</style>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -19,7 +25,7 @@
 
   <header class="navbar">
     <a class="brand" href="#top" aria-label="isWatching home">
-      <img src="logo.png" alt="isWatching logo" />
+      <img class="logo-mark" src="logo.png" alt="isWatching logo" />
       <span>isWatching</span>
     </a>
     <nav class="nav-links" aria-label="Main navigation">
@@ -53,7 +59,7 @@
         <div class="orb orb-b"></div>
         <div class="hero-panel">
           <div class="panel-top">
-            <div class="panel-brand"><img src="logo.png" alt="" /><span>isWatching</span></div>
+            <div class="panel-brand"><img class="logo-mark" src="logo.png" alt="" /><span>isWatching</span></div>
             <div class="panel-actions"><span>⌕</span><span>♡</span><span class="avatar">L</span></div>
           </div>
           <div class="panel-greeting">
@@ -166,7 +172,7 @@
         <div class="window-bar"><span></span><span></span><span></span><small>isWatching / home</small></div>
         <div class="desktop-content">
           <aside>
-            <div class="side-brand"><img src="logo.png" alt="" /><span>isWatching</span></div>
+            <div class="side-brand"><img class="logo-mark" src="logo.png" alt="" /><span>isWatching</span></div>
             <div class="side-item selected">⌂ <span>Home</span></div>
             <div class="side-item">⌕ <span>Explore</span></div>
             <div class="side-item">▢ <span>Library</span></div>
@@ -251,7 +257,7 @@
   </main>
 
   <footer class="footer">
-    <a class="brand" href="#top"><img src="logo.png" alt="" /><span>isWatching</span></a>
+    <a class="brand" href="#top"><img class="logo-mark" src="logo.png" alt="" /><span>isWatching</span></a>
     <p>Your personal viewing space.</p>
     <span>© 2026 isWatching</span>
   </footer>

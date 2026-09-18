@@ -1,17 +1,25 @@
-# isWatching Landing Page — Google Sheets Form
+# isWatching — Revised Landing Page
 
-Landing page for isWatching with a waitlist form connected to Google Sheets through Google Apps Script.
+Dark, smooth landing page for isWatching.
 
-## Connect the form
+## Files
+- `index.html` — page structure
+- `style.css` — visual design and responsive layout
+- `script.js` — smooth scrolling, UI interactions, and Google Sheets waitlist form
+- `logo.png` — isWatching logo
 
-Open `script.js` and find:
+## Before uploading to GitHub
+Keep the same Google Apps Script Web App URL from the current live version in `script.js`:
 
-`const GOOGLE_SHEETS_WEB_APP_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";`
+```js
+const GOOGLE_SHEETS_WEB_APP_URL = "YOUR_EXISTING_WEB_APP_URL";
+```
 
-Replace the placeholder with your deployed Apps Script Web App URL, then save.
+Do not create a new Apps Script deployment. The existing Google Sheet integration can stay as-is.
 
-The form sends Timestamp, Name, and Email to the Google Sheet.
+## GitHub Pages
+Replace the existing files in the current `isWatching` repository. The GitHub Pages URL does not need to change.
 
-The Apps Script deployment must use **Who has access: Anyone**.
 
-For this bootcamp/demo, the frontend uses `no-cors` to submit the form to Apps Script.
+## V2 visual fix
+This build includes explicit logo sizing and a critical dark-background fallback to prevent the hosted page from rendering the logo at full image size.
