@@ -1,5 +1,5 @@
-// Google Sheets waitlist form
-// Paste your deployed Google Apps Script Web App URL below.
+// Google Sheets waitlist form.
+// IMPORTANT: keep the same Web App URL you already use in your current live landing page.
 const GOOGLE_SHEETS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbw_18Dp0l_sHMXNU5Iqd5GEdrXzPq3yNS64fVpyTfQHEbN3WV3obGTsfI_2dwlFZh4R/exec";
 
 const waitlistForm = document.getElementById("waitlist-form");
@@ -16,7 +16,7 @@ if (waitlistForm) {
     if (!name || !email) return;
 
     if (GOOGLE_SHEETS_WEB_APP_URL.includes("PASTE_YOUR")) {
-      message.textContent = "Add your Google Sheets Web App URL in script.js first.";
+      message.textContent = "Add your existing Google Sheets Web App URL in script.js first.";
       return;
     }
 
@@ -42,9 +42,27 @@ if (waitlistForm) {
   });
 }
 
-// Smooth scrolling for navigation links.
-document.querySelectorAll('a[href^="#"]').forEach(link=>{link.addEventListener('click',event=>{const target=document.querySelector(link.getAttribute('href'));if(target){event.preventDefault();target.scrollIntoView({behavior:'smooth'});}})});
+// Smooth, lightweight interactions.
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener("click", event => {
+    const target = document.querySelector(link.getAttribute("href"));
+    if (target) {
+      event.preventDefault();
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });
+});
 
-// Mood chips in the visual app preview.
-document.querySelectorAll('.chip').forEach(chip=>{chip.addEventListener('click',()=>{document.querySelectorAll('.chip').forEach(item=>item.classList.remove('active'));chip.classList.add('active');});});
-document.querySelectorAll('.dash-chip').forEach(chip=>{chip.addEventListener('click',()=>{document.querySelectorAll('.dash-chip').forEach(item=>item.classList.remove('selected'));chip.classList.add('selected');});});
+document.querySelectorAll(".chip").forEach(chip => {
+  chip.addEventListener("click", () => {
+    document.querySelectorAll(".chip").forEach(item => item.classList.remove("active"));
+    chip.classList.add("active");
+  });
+});
+
+document.querySelectorAll(".dash-chip").forEach(chip => {
+  chip.addEventListener("click", () => {
+    document.querySelectorAll(".dash-chip").forEach(item => item.classList.remove("selected"));
+    chip.classList.add("selected");
+  });
+});
